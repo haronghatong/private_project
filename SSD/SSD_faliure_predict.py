@@ -7,7 +7,7 @@ from datetime import datetime
 import re
 
 # 학습된 모델 로드
-model_path = "C:/Users/데이터텍/pythonfile/SSD_remain/svm_failure_model.pkl"  # 올려주신 모델 파일 경로
+model_path = "C:/Users/pythonfile/SSD_remain/svm_failure_model.pkl"  # 올려주신 모델 파일 경로
 if not os.path.exists(model_path):
     print(f"모델 파일 {model_path}을 찾을 수 없습니다. 올바른 경로를 확인하세요.")
     exit(1)
@@ -152,8 +152,8 @@ def run_predictions(input_path, output_path):
     return results
 
 # 실행 경로 설정
-disk_info_path = "C:/Users/데이터텍/pythonfile/SSD_remain/input/disk_info_*.txt"  # 입력 파일 경로
-output_dir = "C:/Users/데이터텍/pythonfile/SSD_remain/output"  # 출력 파일 저장 경로
+disk_info_path = "C:/Users/pythonfile/SSD_remain/input/disk_info_*.txt"  # 입력 파일 경로
+output_dir = "C:/Users/pythonfile/SSD_remain/output"  # 출력 파일 저장 경로
 
 # 출력 디렉토리 생성
 os.makedirs(output_dir, exist_ok=True)
