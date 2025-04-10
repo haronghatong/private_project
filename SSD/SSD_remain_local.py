@@ -13,7 +13,7 @@ import re  # 정규식 사용
 
 # 1. 학습 데이터 준비 및 모델 학습
 # CSV 파일 경로 설정
-extract_path = "C:/Users/데이터텍/pythonfile/SSD_remain"  # 경로 변경
+extract_path = "C:/Users/pythonfile/SSD_remain"  # 경로 변경
 
 # CSV 파일 찾기
 csv_files = [f for f in os.listdir(extract_path) if f.endswith(".csv")]
@@ -85,7 +85,7 @@ evaluate_model(y_test, elastic_net_pred, "ElasticNet")
 
 # 3. 디스크 정보 파일 예측
 # 예측을 진행할 파일 경로
-disk_info_path = "C:/Users/데이터텍/pythonfile/SSD_remain/disk_info_*.txt"  # 경로 변경
+disk_info_path = "C:/Users/pythonfile/SSD_remain/disk_info_*.txt"  # 경로 변경
 disk_info_files = glob.glob(disk_info_path)
 
 if not disk_info_files:
@@ -205,7 +205,7 @@ for file_path in disk_info_files:
         print(f"✅ 예측 결과가 {output_file}에 저장되었습니다.")
 
 # # 전체 결과도 저장 (필요한 경우)
-# output_path = "C:/Users/데이터텍/Desktop/prediction_results.json"  # 경로 변경
+# output_path = "C:/Users/Desktop/prediction_results.json"  # 경로 변경
 # with open(output_path, 'w', encoding='utf-8') as f:
 #     json.dump(results, f, ensure_ascii=False, indent=2)
 
