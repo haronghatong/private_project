@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import joblib  # 모델 저장/로드용 라이브러리
 
 # 학습 데이터 준비
-extract_path = "C:/Users/데이터텍/pythonfile/SSD_remain"
+extract_path = "C:/Users/pythonfile/SSD_remain"
 csv_files = [f for f in os.listdir(extract_path) if f.endswith(".csv")]
 
 if not csv_files:
@@ -88,7 +88,7 @@ model_pipeline = Pipeline([
 model_pipeline.fit(X_train, y_train)
 
 # 학습된 모델 저장
-model_path = "C:/Users/데이터텍/pythonfile/SSD_remain/svm_failure_model.pkl"
+model_path = "C:/Users/pythonfile/SSD_remain/svm_failure_model.pkl"
 joblib.dump(model_pipeline, model_path)
 print(f"✅ 학습된 모델이 {model_path}에 저장되었습니다.")
 
